@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>よくある質問 — Slip</title>
+<style>
+  :root { color-scheme: light dark; --fg:#1c1c1e; --bg:#fbfbfd; --muted:#6e6e73; --rule:#e3e3e8; --accent:#b23a2f; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#f2f2f7; --bg:#111114; --muted:#9a9aa2; --rule:#2c2c31; --accent:#e0705f; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font: 16px/1.85 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 1.5rem; margin-bottom: 2.5rem; }
+  .name { font-size: 1.05rem; font-weight: 600; letter-spacing: .02em; }
+  nav a { color: var(--muted); text-decoration: none; margin-right: 1.25rem; font-size: .9rem; }
+  nav a:hover { color: var(--accent); }
+  h1 { font-size: 1.9rem; line-height:1.35; margin: 0 0 .5rem; }
+  h2 { font-size: 1.4rem; margin: 2.5rem 0 .75rem; }
+  h3 { font-size: 1.05rem; margin: 2rem 0 .5rem; }
+  h4 { font-size: 1rem; margin: 1.5rem 0 .5rem; color: var(--muted); }
+  p { margin: .75rem 0; }
+  ul, ol { margin: .75rem 0; padding-left: 1.5rem; }
+  li { margin: .3rem 0; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  .tablewrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th, td { border: 1px solid var(--rule); padding: .5rem .7rem; text-align: left; vertical-align: top; }
+  th { background: color-mix(in srgb, var(--rule) 45%, transparent); font-weight: 600; }
+  .meta { color: var(--muted); font-size: .9rem; }
+  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+            color: var(--muted); font-size: .85rem; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="name">Slip</div>
+  <nav><a href="./">ホーム</a><a href="privacy.html">プライバシーポリシー</a><a href="faq.html">よくある質問</a><a href="support.html">サポート</a><a href="privacy-en.html">English</a></nav>
+</header>
+<h1>よくある質問</h1>
+<h2>はじめかた</h2>
+<h3>Q. Slipはどうやって開くのですか？</h3>
+<p>選んだ呼び出しキー（既定は <strong>Command</strong>）を<strong>すばやく2回</strong>押してください。画面の端から履歴のオーバーレイが開きます。<br>Slipは<strong>Dockには表示されません</strong>。メニューバーのアイコンから設定や終了ができます。</p>
+<h3>Q. 「アクセシビリティの許可」を求められました。なぜ必要ですか？</h3>
+<p>Slipは2つの目的で、macOSの<strong>アクセシビリティ権限</strong>を使います。</p>
+<ol>
+<li><strong>呼び出しキーの検知</strong>（どのアプリを使っていても、キーを2回押したことを知るため）</li>
+<li><strong>貼り付けの実行</strong>（選んだ内容を、いま使っているアプリへ貼り付けるため）</li>
+</ol>
+<p>この権限は上記のためだけに使います。<strong>入力内容を記録したり、外部へ送ることは一切ありません。</strong><br>許可は「システム設定 → プライバシーとセキュリティ → アクセシビリティ」から、Slipのスイッチをオンにしてください。</p>
+<h3>Q. 許可したのに、キーを2回押しても反応しません。</h3>
+<p>次の順でお試しください。</p>
+<ol>
+<li><strong>Slipを一度終了して開き直す</strong>（メニューバーのアイコン →「終了」→ アプリを再度起動）</li>
+<li>システム設定のアクセシビリティ一覧で、<strong>Slipのスイッチが実際にオンになっているか</strong>確認</li>
+<li>一覧にSlipが<strong>古い項目として残っている</strong>場合は、いったん「−」で削除してから、Slipを起動し直して許可し直す</li>
+<li>呼び出しキーの<strong>2回押しの間隔</strong>が短すぎる可能性があります。詳細設定 →「起動ショートカット」で許容時間を長めに調整できます</li>
+</ol>
+<p>上記で解決しない場合は<a href="https://tally.so/r/pbXrBZ">お問い合わせフォーム</a>からご連絡ください。</p>
+<hr>
+<h2>使いかた</h2>
+<h3>Q. 貼り付ける方法を教えてください。</h3>
+<p>オーバーレイが開いている状態で、以下のいずれかで貼り付きます。</p>
+<ul>
+<li><strong>数字キー（1・2・3…）</strong>：その位置のカードをその場に貼り付け</li>
+<li><strong>矢印キーで選んで Enter</strong></li>
+<li><strong>カードをクリック</strong></li>
+<li><strong>カードを目的のアプリへドラッグ＆ドロップ</strong></li>
+</ul>
+<h3>Q. 複数の項目をまとめて貼り付けられますか？</h3>
+<p>できます。<strong>Shift＋数字キー</strong>で離れた項目を選ぶ、<strong>Command＋Shift＋矢印キー</strong>で範囲を選ぶ、<br>あるいはマウスで複数選択してから <strong>Enter</strong>（またはドラッグ＆ドロップ）してください。<br><strong>選んだ順</strong>に貼り付きます。</p>
+<h3>Q. 画像やファイルも履歴に残りますか？</h3>
+<p>残ります。テキストのほか、<strong>画像</strong>、<strong>動画やPDFなどのファイル</strong>もそのままの形で履歴に入り、<br>元のかたち（ファイルはファイル、画像は画像）で取り出せます。</p>
+<h3>Q. よく使う言葉を、消えないように保存できますか？</h3>
+<p>できます。カードを<strong>右クリック →「カテゴリへ保存」</strong>、またはキーボードの <strong>Command+S</strong> で保存先を選べます。<br>保存した内容は履歴の流れで消えることはありません。</p>
+<h3>Q. オーバーレイが出る位置を変えられますか？</h3>
+<p>詳細設定の「出現位置」で、画面の<strong>上・下</strong>から出すよう選べます（横バー表示）。<br><strong>左右（縦カラム表示）はPRO機能</strong>です。</p>
+<h3>Q. 表示言語を英語に切り替えたい。</h3>
+<p>詳細設定 →「表示言語」で <strong>English</strong> を選び、<strong>Slipを再起動</strong>してください<br>（メニューバーのアイコン →「終了」→ 起動し直す）。macOSの仕組み上、言語の切り替えは再起動後に反映されます。</p>
+<hr>
+<h2>プライバシー・安全性</h2>
+<h3>Q. コピーした内容は外部に送信されますか？</h3>
+<p><strong>送信しません。</strong> コピーした内容は、<strong>このMacの中だけ</strong>に保存されます。<br>Slipがあなたのクリップボードの内容を外部のサーバーへ送ることは一切ありません。</p>
+<p>通信が発生するのは、<strong>あなたが自分でお問い合わせフォームを開いて送信したとき</strong>だけです。<br>詳しくは<a href="https://osyakasama3-hue.github.io/slip-site/privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+<h3>Q. パスワードをコピーしたときも履歴に残りますか？</h3>
+<p><strong>残りません。</strong> 1PasswordなどのパスワードマネージャがmacOSに対して「機密（Concealed）」の印を付けてコピーした<br>内容は、Slipは履歴に保存しません（自動的に除外されます）。<br>同様に、アプリが「一時的（Transient）」「自動生成（AutoGenerated）」と印を付けたコピーも履歴に残しません。<br>（<a href="http://nspasteboard.org">nspasteboard.org</a> の業界標準マーカーに準拠しています。）</p>
+<h3>Q. 履歴を消したいときは？</h3>
+<p>不要なカードは選択して削除できます。カテゴリごと削除することもできます。<br>（削除は取り消せませんので、確認ダイアログでご確認ください。）</p>
+<hr>
+<h2>PRO（買い切り）について</h2>
+<h3>Q. 無料版とPROの違いは？</h3>
+<p>無料版でも、日々の使い心地はそのままお使いいただけます。PROでは次の4つが解放されます。</p>
+<table><thead><tr><th>項目</th><th>無料版</th><th>PRO</th></tr></thead><tbody><tr><td>出現位置</td><td>上・下（横バー）</td><td><strong>＋左右（縦カラム表示）</strong></td></tr><tr><td>カテゴリ数</td><td>3個まで</td><td><strong>無制限</strong></td></tr><tr><td>表示するカード枚数</td><td>上下は6枚固定</td><td><strong>拡張可能</strong></td></tr><tr><td>履歴の保持</td><td>直近50件</td><td><strong>無制限</strong></td></tr></tbody></table>
+<p>PROは<strong>買い切り</strong>です（月額ではありません）。</p>
+<h3>Q. 別のMacでも使えますか？</h3>
+<p>はい。同じApple Accountであれば、詳細設定の「<strong>購入を復元</strong>」からPROを有効にできます。</p>
+<h3>Q. 返金してもらえますか？</h3>
+<p><strong>返金はApple（App Store）が窓口となります。</strong> アプリの開発者側では返金処理ができません。<br>お手数ですが、Appleの返金申請ページ <strong><a href="https://reportaproblem.apple.com">https://reportaproblem.apple.com</a></strong> からお手続きください。</p>
+<p>もし不具合が原因でお困りの場合は、返金の前に一度<a href="https://tally.so/r/pbXrBZ">お問い合わせフォーム</a>からご連絡ください。<br>修正できる可能性があります。</p>
+<hr>
+<h2>解決しないときは</h2>
+<p><a href="https://tally.so/r/pbXrBZ">お問い合わせフォーム</a>からお知らせください。<br>不具合のご報告の際は、<strong>どの画面で・何をしたら・どうなったか</strong>を書いていただけると、解決が早くなります。<br>アプリのバージョンやmacOSのバージョンは<strong>自動で添付</strong>されますので、ご記入は不要です。</p>
+<footer>© 2026 Slip. このページはリポジトリの正本から生成しています（手書きしていません）。</footer>
+</div>
+</body>
+</html>

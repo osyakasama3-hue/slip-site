@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — Slip</title>
+<style>
+  :root { color-scheme: light dark; --fg:#1c1c1e; --bg:#fbfbfd; --muted:#6e6e73; --rule:#e3e3e8; --accent:#b23a2f; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#f2f2f7; --bg:#111114; --muted:#9a9aa2; --rule:#2c2c31; --accent:#e0705f; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font: 16px/1.85 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 1.5rem; margin-bottom: 2.5rem; }
+  .name { font-size: 1.05rem; font-weight: 600; letter-spacing: .02em; }
+  nav a { color: var(--muted); text-decoration: none; margin-right: 1.25rem; font-size: .9rem; }
+  nav a:hover { color: var(--accent); }
+  h1 { font-size: 1.9rem; line-height:1.35; margin: 0 0 .5rem; }
+  h2 { font-size: 1.4rem; margin: 2.5rem 0 .75rem; }
+  h3 { font-size: 1.05rem; margin: 2rem 0 .5rem; }
+  h4 { font-size: 1rem; margin: 1.5rem 0 .5rem; color: var(--muted); }
+  p { margin: .75rem 0; }
+  ul, ol { margin: .75rem 0; padding-left: 1.5rem; }
+  li { margin: .3rem 0; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  .tablewrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th, td { border: 1px solid var(--rule); padding: .5rem .7rem; text-align: left; vertical-align: top; }
+  th { background: color-mix(in srgb, var(--rule) 45%, transparent); font-weight: 600; }
+  .meta { color: var(--muted); font-size: .9rem; }
+  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+            color: var(--muted); font-size: .85rem; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="name">Slip</div>
+  <nav><a href="./">Home</a><a href="privacy-en.html">Privacy Policy</a><a href="faq-en.html">FAQ</a><a href="support.html">Support</a><a href="privacy.html">日本語</a></nav>
+</header>
+<h1>Frequently asked questions</h1>
+<h2>Getting started</h2>
+<h3>Q. How do I open Slip?</h3>
+<p>Press your chosen trigger key (<strong>Command</strong> by default) <strong>twice, quickly</strong>. The clipboard overlay slides in from the edge of your screen.<br>Slip <strong>does not appear in the Dock</strong> — use the menu bar icon for settings and to quit.</p>
+<h3>Q. Why does Slip ask for Accessibility permission?</h3>
+<p>Slip uses macOS <strong>Accessibility</strong> permission for two things:</p>
+<ol>
+<li><strong>Detecting your trigger key</strong> (so the double-press works in any app)</li>
+<li><strong>Performing the paste</strong> (so it can paste into the app you're using)</li>
+</ol>
+<p>That's all it's used for. <strong>Slip never records what you type, and never sends anything outside your Mac.</strong><br>Grant it in System Settings → Privacy &amp; Security → Accessibility, and turn on the switch for Slip.</p>
+<h3>Q. I granted permission, but pressing the key twice does nothing.</h3>
+<p>Try these in order:</p>
+<ol>
+<li><strong>Quit and reopen Slip</strong> (menu bar icon → Quit, then launch it again)</li>
+<li>Check that Slip's switch is <strong>actually on</strong> in the Accessibility list</li>
+<li>If an <strong>old Slip entry</strong> is stuck in the list, remove it with "−", then relaunch Slip and grant permission again</li>
+<li>Your <strong>double-press may be too fast or too slow</strong>. Adjust the timing in Settings → "Trigger shortcut"</li>
+</ol>
+<p>If none of this helps, please contact us at <a href="https://tally.so/r/eq8M1x">our contact form</a>.</p>
+<hr>
+<h2>Using Slip</h2>
+<h3>Q. How do I paste something?</h3>
+<p>With the overlay open, any of these will paste:</p>
+<ul>
+<li><strong>Number keys (1, 2, 3…)</strong> — pastes that card immediately</li>
+<li><strong>Arrow keys to select, then Enter</strong></li>
+<li><strong>Click a card</strong></li>
+<li><strong>Drag and drop</strong> a card into any app</li>
+</ul>
+<h3>Q. Can I paste several items at once?</h3>
+<p>Yes. Use <strong>Shift + number keys</strong> to pick items that aren't next to each other, <strong>Command + Shift + arrow keys</strong><br>to select a range, or select several with the mouse — then press <strong>Enter</strong> (or drag and drop).<br>They're pasted <strong>in the order you selected them</strong>.</p>
+<h3>Q. Does Slip keep images and files too?</h3>
+<p>Yes. Along with text, <strong>images</strong> and <strong>files such as videos and PDFs</strong> are kept in their original form —<br>files stay files, images stay images.</p>
+<h3>Q. Can I save snippets so they don't disappear?</h3>
+<p>Yes. <strong>Right-click a card → "Save to category"</strong>, or press <strong>Command + S</strong> to choose where to save it.<br>Saved items are never pushed out by new history.</p>
+<h3>Q. Can I change where the overlay appears?</h3>
+<p>In Settings → "Position", you can have it appear from the <strong>top or bottom</strong> of your screen (horizontal bar).<br><strong>Left and right (vertical column) is a PRO feature.</strong></p>
+<h3>Q. How do I switch the language to Japanese?</h3>
+<p>Settings → "Display language" → choose <strong>日本語</strong>, then <strong>restart Slip</strong><br>(menu bar icon → Quit, then launch again). On macOS, language changes take effect after a restart.</p>
+<hr>
+<h2>Privacy &amp; safety</h2>
+<h3>Q. Is my clipboard data sent anywhere?</h3>
+<p><strong>No.</strong> Everything you copy is stored <strong>only on your Mac</strong>.<br>Slip never sends your clipboard contents to any external server.</p>
+<p>The only time Slip connects to the internet is when <strong>you</strong> open and submit the contact form yourself.<br>See <a href="https://osyakasama3-hue.github.io/slip-site/privacy-en.html">the privacy policy</a> for details.</p>
+<h3>Q. What about passwords I copy?</h3>
+<p><strong>They aren't saved.</strong> When a password manager (such as 1Password) marks a copy as <strong>Concealed</strong> to macOS,<br>Slip automatically excludes it from your history.<br>The same applies to copies marked <strong>Transient</strong> or <strong>AutoGenerated</strong> by an app.<br>(Slip follows the industry-standard markers from <a href="http://nspasteboard.org">nspasteboard.org</a>.)</p>
+<h3>Q. How do I clear my history?</h3>
+<p>You can select and delete individual cards, or delete a whole category.<br>(Deletion can't be undone, so please confirm in the dialog.)</p>
+<hr>
+<h2>About PRO (one-time purchase)</h2>
+<h3>Q. What's the difference between free and PRO?</h3>
+<p>The everyday experience is the same on the free version. PRO unlocks four things:</p>
+<table><thead><tr><th>Feature</th><th>Free</th><th>PRO</th></tr></thead><tbody><tr><td>Overlay position</td><td>Top / bottom (horizontal bar)</td><td><strong>＋ Left / right (vertical column)</strong></td></tr><tr><td>Categories</td><td>Up to 3</td><td><strong>Unlimited</strong></td></tr><tr><td>Cards shown</td><td>6 (fixed, top/bottom)</td><td><strong>Expandable</strong></td></tr><tr><td>History kept</td><td>Latest 50 items</td><td><strong>Unlimited</strong></td></tr></tbody></table>
+<p>PRO is a <strong>one-time purchase</strong> — not a subscription.</p>
+<h3>Q. Can I use PRO on another Mac?</h3>
+<p>Yes. With the same Apple Account, use "<strong>Restore purchases</strong>" in Settings.</p>
+<h3>Q. Can I get a refund?</h3>
+<p><strong>Refunds are handled by Apple (the App Store)</strong>, not by the developer — we're unable to process refunds ourselves.<br>Please request one at <strong><a href="https://reportaproblem.apple.com">https://reportaproblem.apple.com</a></strong>.</p>
+<p>If something isn't working properly, please contact us first at <a href="https://tally.so/r/eq8M1x">our contact form</a> — we may be able to fix it.</p>
+<hr>
+<h2>Still stuck?</h2>
+<p>Please reach out via <a href="https://tally.so/r/eq8M1x">our contact form</a>.<br>For bug reports, telling us <strong>which screen, what you did, and what happened</strong> helps us solve it much faster.<br>Your app version and macOS version are <strong>attached automatically</strong> — no need to type them in.</p>
+<footer>© 2026 Slip. This page is generated from the source documents in the repository.</footer>
+</div>
+</body>
+</html>
