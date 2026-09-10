@@ -51,8 +51,8 @@
 <h3>3. Your clipboard data</h3>
 <p>The App keeps the things you copy (text, images, files, and so on) as a history. All of it is stored <strong>only on your Mac</strong> and is never sent anywhere. Data lives in the app’s sandbox container and is removed when you delete the App.</p>
 <p>Copies that a password manager marks as “concealed” (an industry-standard marker) are never saved to your history.</p>
-<h3>4. Accessibility permission</h3>
-<p>The App uses macOS Accessibility permission solely to detect your shortcut (a double-tap of a modifier key) and to paste the item you select. This permission is used <strong>only for those actions</strong> — never to record what you type or to send anything anywhere.</p>
+<h3>4. Permissions the App requests</h3>
+<p>The App asks macOS for two permissions: <strong>Input Monitoring</strong>, to notice the trigger key (a double-press of a modifier key), and <strong>permission to send keystrokes (PostEvent)</strong>, to press ⌘V for you so the item you picked is pasted into the app you were using. The App <strong>does not use Accessibility APIs</strong>. macOS lists the keystroke-sending permission under System Settings &gt; Privacy &amp; Security &gt; <strong>Accessibility</strong>, so that is where you turn it on; that listing does not mean the app uses accessibility features. Sending keystrokes is <strong>optional</strong> — without it, your selection is placed on the clipboard so you can press ⌘V yourself. Both permissions are used <strong>only for those actions</strong> — never to record what you type or to send anything anywhere.</p>
 <h3>5. Third parties</h3>
 <p>The App never provides or shares your information with third parties for advertising, analytics, or profiling. Third parties are involved <strong>only when you choose to use the contact form</strong>: as described in section 8, your message and any optional screenshot or diagnostic attachment pass through the providers listed there (Tally, Google, Discord) for support purposes. Your clipboard contents are never passed to them.</p>
 <h3>6. Children’s privacy</h3>
@@ -67,7 +67,7 @@
 <p>To fix problems faster, Slip may use Apple’s MetricKit to receive diagnostic information that macOS generates about Slip. Slip stores a minimized, allowlisted copy on your Mac for up to seven days. Diagnostic information is never submitted automatically. Slip sends only the most recent report, and only after you review the information, turn on the optional attachment setting, and press the support form’s submit button. The attached report is processed through Tally, Google Apps Script, and Discord, and is excluded from input sent to Google Gemini. It is used only for support and troubleshooting, not for advertising, marketing, behavioral analytics, or tracking.</p>
 <h3>10. Contact</h3>
 <p>For questions about this policy, please contact us at <a href="https://tally.so/r/eq8M1x">our contact form</a>.</p>
-<footer>© 2026 Slip. This page is generated from the source documents in the repository.</footer>
+<footer>© 2026 Irie Tsuyoshi. This page is generated from the source documents in the repository.</footer>
 </div>
 </body>
 </html>

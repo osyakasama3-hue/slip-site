@@ -45,13 +45,13 @@
 <h2>はじめかた</h2>
 <h3>Q. Slipはどうやって開くのですか？</h3>
 <p>選んだ呼び出しキー（既定は <strong>Command</strong>）を<strong>すばやく2回</strong>押してください。画面の端から履歴のオーバーレイが開きます。<br>Slipは<strong>Dockには表示されません</strong>。メニューバーのアイコンから設定や終了ができます。</p>
-<h3>Q. 「アクセシビリティの許可」を求められました。なぜ必要ですか？</h3>
-<p>Slipは2つの目的で、macOSの<strong>アクセシビリティ権限</strong>を使います。</p>
+<h3>Q. 「アクセシビリティ」の一覧に Slip が出てきました。何に使うのですか？</h3>
+<p>Slip が macOS へ求める許可は2つです。</p>
 <ol>
-<li><strong>呼び出しキーの検知</strong>（どのアプリを使っていても、キーを2回押したことを知るため）</li>
-<li><strong>貼り付けの実行</strong>（選んだ内容を、いま使っているアプリへ貼り付けるため）</li>
+<li><strong>入力監視</strong> — 呼び出しキー（修飾キーの2回押し）を、どのアプリを使っていても検知するため</li>
+<li><strong>キー送信（PostEvent）</strong> — 選んだ内容を、いま使っているアプリへ ⌘V で貼り付けるため</li>
 </ol>
-<p>この権限は上記のためだけに使います。<strong>入力内容を記録したり、外部へ送ることは一切ありません。</strong><br>許可は「システム設定 → プライバシーとセキュリティ → アクセシビリティ」から、Slipのスイッチをオンにしてください。</p>
+<p><strong>Slip は支援技術の API（Accessibility API）を使いません。</strong> macOS がキー送信の許可を<br>「システム設定 → プライバシーとセキュリティ → <strong>アクセシビリティ</strong>」の一覧に表示するため、<br>オンにする操作はそこで行います。<br>キー送信の許可は<strong>任意</strong>です。オンにしない場合でも、選んだ内容はクリップボードに入るので ⌘V で貼り付けられます。<br>いずれの許可も上記のためだけに使い、<strong>入力内容を記録したり、外部へ送ることは一切ありません。</strong></p>
 <h3>Q. 許可したのに、キーを2回押しても反応しません。</h3>
 <p>次の順でお試しください。</p>
 <ol>
@@ -66,13 +66,15 @@
 <h3>Q. 貼り付ける方法を教えてください。</h3>
 <p>オーバーレイが開いている状態で、以下のいずれかで貼り付きます。</p>
 <ul>
-<li><strong>数字キー（1・2・3…）</strong>：その位置のカードをその場に貼り付け</li>
-<li><strong>矢印キーで選んで Enter</strong></li>
+<li><strong>Command＋数字キー（1・2・3…）</strong>：その位置のカードをその場に貼り付け</li>
+<li><strong>Option＋数字キー（1・2・3…）</strong>：カテゴリを移動</li>
+<li><strong>矢印キーで選んで Return またはテンキーEnter</strong>（修飾キーなし）</li>
+<li><strong>Escape</strong>：オーバーレイを閉じる（修飾キーなし）</li>
 <li><strong>カードをクリック</strong></li>
 <li><strong>カードを目的のアプリへドラッグ＆ドロップ</strong></li>
 </ul>
 <h3>Q. 複数の項目をまとめて貼り付けられますか？</h3>
-<p>できます。<strong>Shift＋数字キー</strong>で離れた項目を選ぶ、<strong>Command＋Shift＋矢印キー</strong>で範囲を選ぶ、<br>あるいはマウスで複数選択してから <strong>Enter</strong>（またはドラッグ＆ドロップ）してください。<br><strong>選んだ順</strong>に貼り付きます。</p>
+<p>できます。<strong>Option＋Shift＋数字キー</strong>で離れた項目を選ぶ、<strong>Command＋Shift＋矢印キー</strong>で範囲を選ぶ、<br>あるいはマウスで複数選択してから <strong>Enter</strong>（またはドラッグ＆ドロップ）してください。<br><strong>選んだ順</strong>に貼り付きます。</p>
 <h3>Q. 画像やファイルも履歴に残りますか？</h3>
 <p>残ります。テキストのほか、<strong>画像</strong>、<strong>動画やPDFなどのファイル</strong>もそのままの形で履歴に入り、<br>元のかたち（ファイルはファイル、画像は画像）で取り出せます。</p>
 <h3>Q. よく使う言葉を、消えないように保存できますか？</h3>
@@ -91,11 +93,11 @@
 <h3>Q. 履歴を消したいときは？</h3>
 <p>不要なカードは選択して削除できます。カテゴリごと削除することもできます。<br>（削除は取り消せませんので、確認ダイアログでご確認ください。）</p>
 <hr>
-<h2>PRO（買い切り）について</h2>
+<h2>PRO（買い切り・月額プラン）について</h2>
 <h3>Q. 無料版とPROの違いは？</h3>
 <p>無料版でも、日々の使い心地はそのままお使いいただけます。PROでは次の4つが解放されます。</p>
-<table><thead><tr><th>項目</th><th>無料版</th><th>PRO</th></tr></thead><tbody><tr><td>出現位置</td><td>上・下（横バー）</td><td><strong>＋左右（縦カラム表示）</strong></td></tr><tr><td>カテゴリ数</td><td>3個まで</td><td><strong>無制限</strong></td></tr><tr><td>表示するカード枚数</td><td>上下は6枚固定</td><td><strong>拡張可能</strong></td></tr><tr><td>履歴の保持</td><td>直近50件</td><td><strong>無制限</strong></td></tr></tbody></table>
-<p>PROは<strong>買い切り</strong>です（月額ではありません）。</p>
+<table><thead><tr><th>項目</th><th>無料版</th><th>PRO</th></tr></thead><tbody><tr><td>出現位置</td><td>上・下（横バー）</td><td><strong>＋左右（縦カラム表示）</strong></td></tr><tr><td>カテゴリ数</td><td>3個まで</td><td><strong>無制限</strong></td></tr><tr><td>表示するカード枚数</td><td>上下は6枚固定</td><td><strong>拡張可能</strong></td></tr><tr><td>履歴の保持</td><td>直近15件</td><td><strong>無制限</strong></td></tr></tbody></table>
+<p>PROは<strong>買い切りまたは月額プラン</strong>から選べます。買い切りは一度の購入でずっと使えます。月額プランは自動更新で、解約は Apple Account の「サブスクリプション」から行えます。</p>
 <h3>Q. 別のMacでも使えますか？</h3>
 <p>はい。同じApple Accountであれば、詳細設定の「<strong>購入を復元</strong>」からPROを有効にできます。</p>
 <h3>Q. 返金してもらえますか？</h3>
@@ -104,7 +106,7 @@
 <hr>
 <h2>解決しないときは</h2>
 <p><a href="https://tally.so/r/pbXrBZ">お問い合わせフォーム</a>からお知らせください。<br>不具合のご報告の際は、<strong>どの画面で・何をしたら・どうなったか</strong>を書いていただけると、解決が早くなります。<br>アプリのバージョンやmacOSのバージョンは<strong>自動で添付</strong>されますので、ご記入は不要です。</p>
-<footer>© 2026 Slip. このページはリポジトリの正本から生成しています（手書きしていません）。</footer>
+<footer>© 2026 Irie Tsuyoshi. このページはリポジトリの正本から生成しています（手書きしていません）。</footer>
 </div>
 </body>
 </html>

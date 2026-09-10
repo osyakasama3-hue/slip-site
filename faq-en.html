@@ -45,13 +45,14 @@
 <h2>Getting started</h2>
 <h3>Q. How do I open Slip?</h3>
 <p>Press your chosen trigger key (<strong>Command</strong> by default) <strong>twice, quickly</strong>. The clipboard overlay slides in from the edge of your screen.<br>Slip <strong>does not appear in the Dock</strong> — use the menu bar icon for settings and to quit.</p>
-<h3>Q. Why does Slip ask for Accessibility permission?</h3>
-<p>Slip uses macOS <strong>Accessibility</strong> permission for two things:</p>
+<h3>Q. Why does Slip appear in the Accessibility list?</h3>
+<p>Slip asks macOS for two permissions:</p>
 <ol>
-<li><strong>Detecting your trigger key</strong> (so the double-press works in any app)</li>
-<li><strong>Performing the paste</strong> (so it can paste into the app you're using)</li>
+<li><strong>Input Monitoring</strong> — to notice the trigger key (a double-press of a modifier key) in any app</li>
+<li><strong>Permission to send keystrokes (PostEvent)</strong> — to press ⌘V for you, so the item you picked is</li>
 </ol>
-<p>That's all it's used for. <strong>Slip never records what you type, and never sends anything outside your Mac.</strong><br>Grant it in System Settings → Privacy &amp; Security → Accessibility, and turn on the switch for Slip.</p>
+<p>pasted into the app you were using</p>
+<p><strong>Slip does not use Accessibility APIs.</strong> macOS lists the keystroke-sending permission under<br>System Settings &gt; Privacy &amp; Security &gt; <strong>Accessibility</strong>, so that is where you turn Slip on.<br>Sending keystrokes is <strong>optional</strong> — without it, your selection is placed on the clipboard so you<br>can paste it yourself with ⌘V.<br>Both permissions are used only for the above. **Slip never records what you type, and never sends<br>anything outside your Mac.**</p>
 <h3>Q. I granted permission, but pressing the key twice does nothing.</h3>
 <p>Try these in order:</p>
 <ol>
@@ -66,13 +67,15 @@
 <h3>Q. How do I paste something?</h3>
 <p>With the overlay open, any of these will paste:</p>
 <ul>
-<li><strong>Number keys (1, 2, 3…)</strong> — pastes that card immediately</li>
-<li><strong>Arrow keys to select, then Enter</strong></li>
+<li><strong>Command + number keys (1, 2, 3…)</strong> — pastes that card immediately</li>
+<li><strong>Option + number keys (1, 2, 3…)</strong> — moves between categories</li>
+<li><strong>Arrow keys to select, then Return or keypad Enter</strong> (no modifier)</li>
+<li><strong>Escape</strong> — closes the overlay (no modifier)</li>
 <li><strong>Click a card</strong></li>
 <li><strong>Drag and drop</strong> a card into any app</li>
 </ul>
 <h3>Q. Can I paste several items at once?</h3>
-<p>Yes. Use <strong>Shift + number keys</strong> to pick items that aren't next to each other, <strong>Command + Shift + arrow keys</strong><br>to select a range, or select several with the mouse — then press <strong>Enter</strong> (or drag and drop).<br>They're pasted <strong>in the order you selected them</strong>.</p>
+<p>Yes. Use <strong>Option + Shift + number keys</strong> to pick items that aren't next to each other, <strong>Command + Shift + arrow keys</strong><br>to select a range, or select several with the mouse — then press <strong>Enter</strong> (or drag and drop).<br>They're pasted <strong>in the order you selected them</strong>.</p>
 <h3>Q. Does Slip keep images and files too?</h3>
 <p>Yes. Along with text, <strong>images</strong> and <strong>files such as videos and PDFs</strong> are kept in their original form —<br>files stay files, images stay images.</p>
 <h3>Q. Can I save snippets so they don't disappear?</h3>
@@ -91,11 +94,11 @@
 <h3>Q. How do I clear my history?</h3>
 <p>You can select and delete individual cards, or delete a whole category.<br>(Deletion can't be undone, so please confirm in the dialog.)</p>
 <hr>
-<h2>About PRO (one-time purchase)</h2>
+<h2>About PRO (one-time purchase or monthly plan)</h2>
 <h3>Q. What's the difference between free and PRO?</h3>
 <p>The everyday experience is the same on the free version. PRO unlocks four things:</p>
-<table><thead><tr><th>Feature</th><th>Free</th><th>PRO</th></tr></thead><tbody><tr><td>Overlay position</td><td>Top / bottom (horizontal bar)</td><td><strong>＋ Left / right (vertical column)</strong></td></tr><tr><td>Categories</td><td>Up to 3</td><td><strong>Unlimited</strong></td></tr><tr><td>Cards shown</td><td>6 (fixed, top/bottom)</td><td><strong>Expandable</strong></td></tr><tr><td>History kept</td><td>Latest 50 items</td><td><strong>Unlimited</strong></td></tr></tbody></table>
-<p>PRO is a <strong>one-time purchase</strong> — not a subscription.</p>
+<table><thead><tr><th>Feature</th><th>Free</th><th>PRO</th></tr></thead><tbody><tr><td>Overlay position</td><td>Top / bottom (horizontal bar)</td><td><strong>＋ Left / right (vertical column)</strong></td></tr><tr><td>Categories</td><td>Up to 3</td><td><strong>Unlimited</strong></td></tr><tr><td>Cards shown</td><td>6 (fixed, top/bottom)</td><td><strong>Expandable</strong></td></tr><tr><td>History kept</td><td>Latest 15 items</td><td><strong>Unlimited</strong></td></tr></tbody></table>
+<p>PRO is available as a <strong>one-time purchase or monthly plan</strong>. With a one-time purchase, you keep it forever. The monthly plan renews automatically and can be canceled in Subscriptions in your Apple Account.</p>
 <h3>Q. Can I use PRO on another Mac?</h3>
 <p>Yes. With the same Apple Account, use "<strong>Restore purchases</strong>" in Settings.</p>
 <h3>Q. Can I get a refund?</h3>
@@ -104,7 +107,7 @@
 <hr>
 <h2>Still stuck?</h2>
 <p>Please reach out via <a href="https://tally.so/r/eq8M1x">our contact form</a>.<br>For bug reports, telling us <strong>which screen, what you did, and what happened</strong> helps us solve it much faster.<br>Your app version and macOS version are <strong>attached automatically</strong> — no need to type them in.</p>
-<footer>© 2026 Slip. This page is generated from the source documents in the repository.</footer>
+<footer>© 2026 Irie Tsuyoshi. This page is generated from the source documents in the repository.</footer>
 </div>
 </body>
 </html>
