@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー | Cetti</title>
+  <meta name="description" content="Cetti プライバシーポリシー。個人情報の収集ゼロ、完全ローカル動作、外部通信なしの安心設計についてご案内します。">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="./index.html" class="brand">
+      <span class="brand-icon">C</span>
+      <span>Cetti</span>
+    </a>
+    <nav>
+      <a href="./index.html">ホーム</a>
+      <a href="./privacy.html" class="active">プライバシー</a>
+      <a href="./terms.html">利用規約</a>
+      <a href="./tokushoho.html">特定商取引法</a>
+      <a href="./support.html">サポート</a>
+      <div class="lang-switch">
+        <a href="#ja" class="active">JA</a>
+        <a href="#en">EN</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- 日本語セクション -->
+  <section id="ja" class="lang-content">
+    <h1>プライバシーポリシー</h1>
+    <p class="subtitle">最終改定日: 2026年11月23日</p>
+
+    <p>本プライバシーポリシーは、macOS アプリケーション「Cetti」（以下「本アプリ」といいます）における、利用者の情報の取り扱いについて説明するものです。</p>
+
+    <h2>1. 基本方針（個人情報を収集しません）</h2>
+    <p>本アプリは、利用者のプライバシーを最大限尊重して設計されています。本アプリは、氏名、メールアドレス、電話番号、位置情報、クレジットカード情報などの個人を特定できる情報（個人情報）を<strong>一切収集、取得、追跡、または外部サーバーへ送信しません</strong>。</p>
+
+    <h2>2. ローカルに保存されるデータ</h2>
+    <p>本アプリは、ウィンドウ配置の記憶および復元機能の提供、ならびに動作不良の診断のため、以下の設定・ログデータを利用者の Mac 内（ローカルストレージ：<code>~/Library/Application Support/cetti/</code> および <code>~/Library/Logs/cetti/</code>）にのみ保存します。</p>
+
+    <ul>
+      <li><strong>WorkSet（配置セット）情報 (<code>worksets.json</code>)</strong>:
+        <ul>
+          <li>利用者が保存した配置セットの名称（例:「作業用配置」）</li>
+          <li>配置対象アプリの識別子（バンドル ID、例: <code>com.apple.Safari</code>）および表示名</li>
+          <li>ウィンドウの座標およびサイズ（X, Y, 幅, 高さ）</li>
+          <li>ウィンドウの重なり順およびディスプレイ識別子</li>
+          <li>割り当てられたキーボードショートカット設定</li>
+        </ul>
+      </li>
+      <li><strong>レイアウト設定 (<code>layouts.json</code>)</strong>:
+        <ul>
+          <li>画面分割ゾーン（2分割、3分割等）の比率設定</li>
+        </ul>
+      </li>
+      <li><strong>アプリ設定 (<code>settings.json</code>)</strong>:
+        <ul>
+          <li>既定のレイアウトや動作環境に関するローカル設定</li>
+        </ul>
+      </li>
+      <li><strong>動作診断ログ (<code>~/Library/Logs/cetti/cetti-YYYYMMDD.jsonl</code>)</strong>:
+        <ul>
+          <li>アプリの起動状態、OSバージョン、ウィンドウ整列の成功・失敗ステータス、処理所要時間等のローカル動作ログ（不具合解析・安定動作のため Mac ローカルにのみ記録され、外部へ送信されることはありません。1ファイル最大5MB、7日経過後に自動削除されます）。</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="alert">
+      <div class="alert-title">【重要】本アプリが取得・保存しない情報</div>
+      <p>本アプリは、ウィンドウ内に表示されている文書内容、閲覧中の Web サイト URL、ファイル名、キーボード入力内容（テキスト）、画面のキャプチャ画像（ピクセルデータ）などを取得・保存することは一切ありません。</p>
+    </div>
+
+    <h2>3. 外部送信および第三者提供の有無</h2>
+    <ul>
+      <li><strong>外部送信の完全遮断:</strong> 本アプリにはネットワーク通信機能（インターネットへの接続処理）は実装されておらず、また macOS の App Sandbox においてもネットワーク接続権限（<code>com.apple.security.network.client</code>）を有していません。ローカルに保存されたデータが外部に送信されることは構造上あり得ません。</li>
+      <li><strong>第三者提供・トラッキングなし:</strong> 本アプリは、いかなる第三者製のアナリティクス（アクセス解析）ツール、トラッキングコード、広告配信 SDK も含んでいません。利用者の操作履歴や端末情報が第三者に提供されることはありません。</li>
+      <li><strong>App Store のプライバシー申告:</strong> App Store Connect における「アプリのプライバシー（Nutrition Label）」は<strong>「データ収集なし（Data Not Collected）」</strong>に該当します。</li>
+    </ul>
+
+    <h2>4. アプリ内課金に伴う情報</h2>
+    <p>有料プラン（Pro）の購入処理は、すべて Apple Inc. の App Store（In-App Purchase）決済システムを通じて安全に行われます。開発者が利用者のクレジットカード情報、請求先住所、Apple ID 等の決済情報にアクセスしたり、これを保持することはありません。これらの決済情報は Apple のプライバシーポリシーに従って管理されます。</p>
+
+    <h2>5. プライバシーポリシーの改定</h2>
+    <p>本ポリシーは、法令の変更や本アプリの機能追加等に伴い、改定されることがあります。改定が行われた場合は、本サポートページまたはアップデート情報等を通じて周知します。</p>
+
+    <h2>6. お問い合わせ</h2>
+    <p>本ポリシーに関するご質問やお問い合わせは、<a href="./support.html">サポートページ</a>に記載の窓口までお願いいたします。</p>
+  </section>
+
+  <hr>
+
+  <!-- 英語セクション -->
+  <section id="en" class="lang-content">
+    <h2>Privacy Policy (English Version)</h2>
+    <p class="subtitle">Last Updated: November 23, 2026</p>
+
+    <p>This Privacy Policy explains how "Cetti" (referred to as "the App"), a macOS application, handles user information and data.</p>
+
+    <h3>1. Core Principle (Zero Data Collection)</h3>
+    <p>The App is engineered with user privacy as a foundational principle. The App does <strong>not collect, record, track, or transmit any personally identifiable information (PII)</strong>, such as your name, email address, phone number, location data, or payment information.</p>
+
+    <h3>2. Data Stored Locally</h3>
+    <p>To provide window management, workspace restoration features, and local diagnostic capabilities, the App stores configuration and diagnostic log data exclusively on your local Mac (<code>~/Library/Application Support/cetti/</code> and <code>~/Library/Logs/cetti/</code>):</p>
+
+    <ul>
+      <li><strong>WorkSet Configuration (<code>worksets.json</code>)</strong>:
+        <ul>
+          <li>User-defined workspace names (e.g., "Development Setup")</li>
+          <li>Application bundle identifiers (e.g., <code>com.apple.Safari</code>) and display names</li>
+          <li>Window coordinates and dimensions (X, Y, width, height)</li>
+          <li>Window z-order and display identifiers</li>
+          <li>Assigned keyboard shortcuts</li>
+        </ul>
+      </li>
+      <li><strong>Zone Layout Configuration (<code>layouts.json</code>)</strong>:
+        <ul>
+          <li>Split-screen ratios and zone definitions</li>
+        </ul>
+      </li>
+      <li><strong>App Preferences (<code>settings.json</code>)</strong>:
+        <ul>
+          <li>User preferences for default layouts and behaviors</li>
+        </ul>
+      </li>
+      <li><strong>Diagnostic Logs (<code>~/Library/Logs/cetti/cetti-YYYYMMDD.jsonl</code>)</strong>:
+        <ul>
+          <li>Local diagnostic logs capturing app launch state, OS version, window arrangement success/failure status, and execution duration (stored strictly on your Mac for troubleshooting, never transmitted externally, max 5MB per file, auto-pruned after 7 days).</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="alert">
+      <div class="alert-title">[IMPORTANT] Data Never Collected or Accessed</div>
+      <p>The App never inspects, captures, or stores the textual content of your windows, URLs of websites you visit, file paths, keystrokes, text input, or screenshots/pixel data of your screen.</p>
+    </div>
+
+    <h3>3. External Transmission and Third Parties</h3>
+    <ul>
+      <li><strong>Zero Network Transmission:</strong> The App contains no network communication code, nor does it possess the network client entitlement (<code>com.apple.security.network.client</code>) under macOS App Sandbox. It is technically impossible for the App to transmit your local data to any external server.</li>
+      <li><strong>No Third-Party Analytics or Ads:</strong> The App contains no third-party tracking libraries, analytics SDKs, or advertising networks. Your usage remains 100% private and offline.</li>
+      <li><strong>App Store Privacy Labels:</strong> Under Apple's App Store Connect classification, the App qualifies as <strong>"Data Not Collected"</strong>.</li>
+    </ul>
+
+    <h3>4. In-App Purchases</h3>
+    <p>Purchases for optional Pro features are handled securely and directly by Apple Inc. via the Mac App Store In-App Purchase system. The developer never receives, processes, or stores your financial details, billing address, or Apple ID credentials. Payment processing is governed by Apple's Privacy Policy.</p>
+
+    <h3>5. Changes to This Policy</h3>
+    <p>We may update this Privacy Policy from time to time. Any revisions will be published on this support page.</p>
+
+    <h3>6. Contact Us</h3>
+    <p>If you have any questions regarding this Privacy Policy, please contact us via our <a href="./support.html">Support Page</a>.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div>&copy; 2026 Slip. All rights reserved. Cetti is an independent application and is not affiliated with Apple Inc.</div>
+    <div class="footer-links">
+      <a href="./index.html">ホーム / Home</a>
+      <a href="./privacy.html">プライバシー / Privacy</a>
+      <a href="./terms.html">利用規約 / Terms</a>
+      <a href="./tokushoho.html">特定商取引法 / Legal</a>
+      <a href="./support.html">サポート / Support</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

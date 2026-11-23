@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サポート・よくある質問 | Cetti</title>
+  <meta name="description" content="macOS 窓整理ユーティリティ Cetti の公式サポートページです。初期設定方法、使い方、よくある質問（FAQ）、お問い合わせ窓口をご案内します。">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="./index.html" class="brand">
+      <span class="brand-icon">C</span>
+      <span>Cetti</span>
+    </a>
+    <nav>
+      <a href="./index.html">ホーム</a>
+      <a href="./privacy.html">プライバシー</a>
+      <a href="./terms.html">利用規約</a>
+      <a href="./tokushoho.html">特定商取引法</a>
+      <a href="./support.html" class="active">サポート</a>
+      <div class="lang-switch">
+        <a href="#ja" class="active">JA</a>
+        <a href="#en">EN</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- 日本語セクション -->
+  <section id="ja" class="lang-content">
+    <h1>サポート・よくある質問 (FAQ)</h1>
+    <p class="subtitle">Cetti のご利用方法、トラブルシューティング、お問い合わせ窓口をご案内いたします。</p>
+
+    <div class="alert">
+      <div class="alert-title">お問い合わせ窓口</div>
+      <p>操作方法のご質問、不具合のご報告、その他のお問い合わせは下記窓口にて承っております。<br>
+      <strong>サポート窓口:</strong> <a href="mailto:support.slip@gmail.com">support.slip@gmail.com</a><br>
+      <small style="color:var(--text-muted);">※迅速な対応のため、ご利用中の macOS バージョンおよび Mac のモデル（Apple Silicon / Intel）を併記の上ご連絡いただけますと幸いです。</small></p>
+    </div>
+
+    <h2>初回セットアップ手順</h2>
+    <div class="card">
+      <h3>1. ショートカットの追加（初回のみ必須）</h3>
+      <p>Cetti は、他社製アプリを操作するための危険な特権（アクセシビリティ権限）を使用せず、macOS 標準の「ショートカット」アプリと連携して安全にウィンドウを整列します。</p>
+      <ol>
+        <li>Cetti を起動すると、メニューバー（画面右上）に鳥のアイコンが表示されます。</li>
+        <li>初回起動時の案内バナー、またはメニュー内の「ショートカットを追加」をクリックします。</li>
+        <li>macOS 標準のショートカットアプリが開き、<code>cetti-place.shortcut</code> の追加確認画面が表示されます。「ショートカットを追加」をクリックして登録してください。</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h3>2. ウィンドウ配置の保存（丸暗記）と復元</h3>
+      <ol>
+        <li>普段作業している状態の通りに、各アプリ（ブラウザ、エディタ、ターミナル等）のウィンドウを画面上に並べます。</li>
+        <li>メニューバーの Cetti アイコンをクリックし、<strong>「今の画面配置を丸暗記して登録」</strong>を選択します。</li>
+        <li>配置セットに名前（例：「作業用配置」「読書用」など）を付けて保存します。</li>
+        <li>次回以降、メニューバーからセット名をクリックするか、設定したショートカットキーを押すだけで、一瞬でウィンドウが指定位置に復元されます。</li>
+      </ol>
+    </div>
+
+    <h2>よくある質問（FAQ）</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 「ショートカットが見つかりません」と表示され、ウィンドウが整列されません。</div>
+      <div class="faq-a">
+        <p>A. macOS のショートカットアプリ内に <code>cetti-place</code> ショートカットが登録されていない可能性があります。</p>
+        <p>Cetti のメニューから「設定」シートを開き、「ショートカットを追加」ボタンをクリックして、同梱のショートカットを再度インストールしてください。完了後、ターミナルで <code>/usr/bin/shortcuts list</code> を実行して <code>cetti-place</code> が表示されるか確認できます。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. アクセシビリティ権限や画面収録権限を求められないのはなぜですか？</div>
+      <div class="faq-a">
+        <p>A. Cetti はプライバシーとセキュリティを最優先に設計されているためです。</p>
+        <p>多くのウィンドウ管理アプリは、画面内容を盗み見たり他プロセスを自由に改変できる強力な特権（アクセシビリティ権限・画面収録権限）を要求します。しかし Cetti は、標準の CoreGraphics API でウィンドウの枠線座標（幾何情報）のみを取得し、実際のウィンドウ移動は Apple 公式の安全な Shortcuts 機構に委譲します。これにより、お客様の Mac の安全性を損なうことなく動作します。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. インターネット通信は行っていますか？外部にデータが漏れる心配はありませんか？</div>
+      <div class="faq-a">
+        <p>A. 一切通信を行いません。Cetti は完全ローカル・オフラインで動作します。</p>
+        <p>macOS の App Sandbox においてネットワーククライアント権限（<code>com.apple.security.network.client</code>）を所持しておらず、アプリ内部にもネットワーク通信を行うコードは存在しません。設定やログが外部に漏洩・送信されることは技術的に不可能です。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. ログファイルはどこに保存されていますか？個人情報は含まれますか？</div>
+      <div class="faq-a">
+        <p>A. 不具合解析用の動作ログは、Mac ローカルの <code>~/Library/Logs/cetti/cetti-YYYYMMDD.jsonl</code> にのみ保存されます。</p>
+        <p>記録される内容は、アプリの起動時刻、macOS バージョン、ウィンドウ整列の成否ステータス、処理所要時間のみです。ウィンドウのテキスト、開いている Web サイトの URL、ファイル名、入力キーなどの個人情報は一切含まれません。ログファイルは1ファイル最大5MBに制限され、7日経過後に自動削除されます。手動で削除しても問題ありません。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. サブスクリプションの解約方法を教えてください。</div>
+      <div class="faq-a">
+        <p>A. macOS の「システム設定」または App Store からいつでも解約できます。</p>
+        <ol>
+          <li>Mac の「システム設定」を開きます。</li>
+          <li>サイドバー最上部の「Apple ID（ご自身のお名前）」をクリックします。</li>
+          <li>「メディアと購入」＞「サブスクリプション」の「管理…」をクリックします（または App Store のアカウント設定画面を開きます）。</li>
+          <li>Cetti を選択し、「サブスクリプションをキャンセル」をクリックします。</li>
+        </ol>
+        <p><small style="color:var(--text-muted);">※次回の更新日時の24時間前までにキャンセル手続きを行ってください。途中で解約しても、現在の請求期間満了日までは Pro 機能を継続してご利用いただけます。</small></p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 購入した Pro プランを別の Mac でも使えますか？</div>
+      <div class="faq-a">
+        <p>A. はい、同じ Apple ID を設定している Mac であれば追加料金なしでご利用いただけます。</p>
+        <p>別の Mac に Cetti をインストール後、設定画面または購入画面の「購入を復元（Restore Purchases）」をクリックすることで、ライセンスが自動的に反映されます。</p>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 英語セクション -->
+  <section id="en" class="lang-content">
+    <h2>Support & Frequently Asked Questions (FAQ)</h2>
+    <p class="subtitle">User guides, troubleshooting steps, and customer support channels for Cetti.</p>
+
+    <div class="alert">
+      <div class="alert-title">Customer Support Desk</div>
+      <p>For technical support, bug reports, or feature requests, please reach out to us:<br>
+      <strong>Support Contact:</strong> <a href="mailto:support.slip@gmail.com">support.slip@gmail.com</a><br>
+      <small style="color:var(--text-muted);">*To assist you faster, please include your macOS version and Mac model (Apple Silicon / Intel) in your message.</small></p>
+    </div>
+
+    <h2>Getting Started</h2>
+    <div class="card">
+      <h3>1. Adding the Helper Shortcut (Required Once)</h3>
+      <p>Cetti operates securely without invasive system privileges (Accessibility) by delegating window moves to macOS native Shortcuts.</p>
+      <ol>
+        <li>Upon launching Cetti, the bird icon will appear in your macOS menu bar.</li>
+        <li>Click the initial onboarding banner or select "Add Shortcut" from the settings sheet.</li>
+        <li>The built-in Shortcuts app will launch showing <code>cetti-place.shortcut</code>. Click "Add Shortcut" to finish.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h3>2. Capturing & Restoring Window Sets</h3>
+      <ol>
+        <li>Arrange your target windows (browser, terminal, editor, etc.) to your preferred positions.</li>
+        <li>Click Cetti in the menu bar and choose <strong>"Capture Active Layout"</strong>.</li>
+        <li>Give the set a memorable name (e.g., "Deep Work", "Coding").</li>
+        <li>Click the set from the menu bar or press the assigned global hotkey anytime to restore that exact arrangement instantly.</li>
+      </ol>
+    </div>
+
+    <h2>FAQ</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. Windows are not rearranging and an error says "Shortcut not found".</div>
+      <div class="faq-a">
+        <p>A. The helper shortcut <code>cetti-place</code> might not be installed in your macOS Shortcuts library.</p>
+        <p>Open Cetti Settings, click "Install Helper Shortcut", and accept the addition in the Shortcuts app. You can verify installation by running <code>/usr/bin/shortcuts list</code> in Terminal.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. Why does Cetti NOT require Accessibility or Screen Recording permissions?</div>
+      <div class="faq-a">
+        <p>A. Cetti was built from day one with strict privacy and security principles.</p>
+        <p>Unlike conventional window managers that require invasive Accessibility rights (which can read keystrokes and control other apps) or Screen Recording (which can capture sensitive screen contents), Cetti uses read-only CoreGraphics APIs to inspect bounding boxes and relies on Apple's sanctioned Shortcuts system to move windows safely.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. Does Cetti transmit any data over the internet?</div>
+      <div class="faq-a">
+        <p>A. Absolutely zero. Cetti operates 100% offline.</p>
+        <p>The app does not have the network client entitlement (<code>com.apple.security.network.client</code>) and contains no networking code. It is technically impossible for Cetti to send your data or logs anywhere.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. Where are diagnostic logs stored, and do they contain personal data?</div>
+      <div class="faq-a">
+        <p>A. Operational logs are saved strictly to your local Mac at <code>~/Library/Logs/cetti/cetti-YYYYMMDD.jsonl</code>.</p>
+        <p>Logs record only app launch timestamps, OS version, arrangement success/failure status, and execution duration. They NEVER record window titles, web URLs, file paths, or keystrokes. Files are capped at 5MB and automatically pruned after 7 days.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. How do I cancel my monthly subscription?</div>
+      <div class="faq-a">
+        <p>A. You can cancel anytime via macOS System Settings or the Mac App Store:</p>
+        <ol>
+          <li>Open System Settings on your Mac.</li>
+          <li>Click your Apple ID name at the top of the sidebar.</li>
+          <li>Go to "Media & Purchases" > "Subscriptions" > "Manage...".</li>
+          <li>Select Cetti and click "Cancel Subscription".</li>
+        </ol>
+        <p><small style="color:var(--text-muted);">*Be sure to cancel at least 24 hours prior to the next renewal date. You retain full access to Pro features until the end of the current billing cycle.</small></p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. Can I use my Pro purchase on multiple Mac devices?</div>
+      <div class="faq-a">
+        <p>A. Yes. Any Mac signed in with the same Apple ID can use the Pro tier at no additional cost. Simply click "Restore Purchases" in Cetti settings if the license is not recognized automatically.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div>&copy; 2026 Slip. All rights reserved. Cetti is an independent application and is not affiliated with Apple Inc.</div>
+    <div class="footer-links">
+      <a href="./index.html">ホーム / Home</a>
+      <a href="./privacy.html">プライバシー / Privacy</a>
+      <a href="./terms.html">利用規約 / Terms</a>
+      <a href="./tokushoho.html">特定商取引法 / Legal</a>
+      <a href="./support.html">サポート / Support</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

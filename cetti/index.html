@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cetti — macOS メニューバー常駐窓整理アプリ</title>
+  <meta name="description" content="Cetti は macOS 向けの軽量メニューバー常駐窓整理ユーティリティです。強大な権限不要、完全ローカル動作でウィンドウ配置を記憶・復元します。">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="./index.html" class="brand">
+      <span class="brand-icon">C</span>
+      <span>Cetti</span>
+    </a>
+    <nav>
+      <a href="./index.html" class="active">ホーム</a>
+      <a href="./privacy.html">プライバシー</a>
+      <a href="./terms.html">利用規約</a>
+      <a href="./tokushoho.html">特定商取引法</a>
+      <a href="./support.html">サポート</a>
+      <div class="lang-switch">
+        <a href="#ja" class="active">JA</a>
+        <a href="#en">EN</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- 日本語セクション -->
+  <section id="ja" class="lang-content">
+    <h1>Cetti</h1>
+    <p class="subtitle">メニューバーからワンクリックで、いつものウィンドウ配置を記憶・復元。<br>強大な権限不要、安全で軽量な macOS 窓整理ユーティリティ。</p>
+
+    <div class="alert">
+      <div class="alert-title">プライバシーと安全性を最優先した設計</div>
+      <p>Cetti は、他社製アプリを操作するための「アクセシビリティ権限」や画面内容を読み取る「画面収録権限」を一切要求しません。データはすべて Mac 内（ローカル）にのみ保存され、外部サーバーへの通信は一切行いません。</p>
+    </div>
+
+    <h2>主な特長</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>⚡️ 丸暗記＆ワンクリック復元</h3>
+        <p>作業中の画面レイアウト（各アプリのウィンドウ位置・サイズ）を「丸暗記」して保存。メニューバーやショートカットから一瞬でいつもの配置に戻せます。</p>
+      </div>
+      <div class="card">
+        <h3>🔒 強大なシステム権限不要</h3>
+        <p>画面収録やアクセシビリティ権限は不要。Apple 標準の「ショートカット」アプリと連携することで、安全かつ確実にウィンドウを整列します。</p>
+      </div>
+      <div class="card">
+        <h3>🌐 完全ローカル・オフライン動作</h3>
+        <p>ネットワーク通信機能（URLSession 等）を持たず、通信権限も要求しません。操作ログや設定が外部へ漏洩・送信されることは技術的に不可能です。</p>
+      </div>
+      <div class="card">
+        <h3>📐 ゾーン分割レイアウト</h3>
+        <p>画面の2分割、3分割などのゾーン比率を自在に設定。マルチディスプレイ環境や外部モニターにも柔軟に対応します。</p>
+      </div>
+    </div>
+
+    <h2>料金プラン</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>無料版 (Free)</h3>
+        <div class="price">¥0</div>
+        <div class="price-sub">基本機能をずっと無料で使用可能</div>
+        <ul class="pricing-features">
+          <li>ウィンドウ配置の丸暗記＆復元（基本枠）</li>
+          <li>標準ゾーンレイアウト</li>
+          <li>グローバルショートカット機能</li>
+          <li>完全ローカル・プライバシー保護</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-badge">人気</div>
+        <h3>Pro 買切プラン</h3>
+        <div class="price">¥2,000</div>
+        <div class="price-sub">一括払い（非消費型・永続ライセンス）</div>
+        <ul class="pricing-features">
+          <li>ワークセット（配置セット）登録数の無制限化</li>
+          <li>カスタムゾーン分割比率の詳細設定</li>
+          <li>定位置ロック・高度なウィンドウ整列</li>
+          <li>将来のメジャーアップデートを含む永続利用</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Pro 月額プラン</h3>
+        <div class="price">¥250 <span style="font-size: 1rem; font-weight: normal; color: var(--text-muted);">/ 月</span></div>
+        <div class="price-sub">自動更新サブスクリプション（税込）</div>
+        <ul class="pricing-features">
+          <li>Pro のすべての高度な機能を解放</li>
+          <li>いつでも macOS 設定から解約可能</li>
+          <li>短期間だけ試したい方におすすめ</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="alert alert-warning">
+      <div class="alert-title">【初版リリースに関するお知らせ】</div>
+      <p>初版（v1.0）においては、より多くのユーザー様に安全性を実感いただくため、基本機能を無料にて提供開始する場合があります。アプリ内課金（Pro機能）は Mac App Store 決済システム（In-App Purchase）の準備が整い次第、順次提供開始いたします。</p>
+    </div>
+
+    <h2>動作環境</h2>
+    <div class="table-wrapper">
+      <table>
+        <tbody>
+          <tr>
+            <th>対応 OS</th>
+            <td>macOS 14.0 (Sonoma) 以降</td>
+          </tr>
+          <tr>
+            <th>対応ハードウェア</th>
+            <td>Apple Silicon (M1/M2/M3/M4) および Intel Mac</td>
+          </tr>
+          <tr>
+            <th>必須環境</th>
+            <td>macOS 標準「ショートカット」アプリ（OS標準搭載）</td>
+          </tr>
+          <tr>
+            <th>配布元</th>
+            <td>Mac App Store</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>公開文書・ポリシー</h2>
+    <ul>
+      <li><a href="./privacy.html">プライバシーポリシー（Privacy Policy）</a> — データ収集なし、ローカル保存・診断ログの取り扱いについて</li>
+      <li><a href="./terms.html">利用規約（Terms of Service）</a> — アプリのご利用条件、ライセンス、決済・解約について</li>
+      <li><a href="./tokushoho.html">特定商取引法に基づく表記（Specified Commercial Transactions Act）</a> — 販売業者、価格、支払時期・方法、返金特約</li>
+      <li><a href="./support.html">サポート・お問い合わせ（Support & FAQ）</a> — よくある質問、不具合時のログ確認、お問い合わせ窓口</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <!-- English Section -->
+  <section id="en" class="lang-content">
+    <h1>Cetti</h1>
+    <p class="subtitle">Capture and restore your ideal window arrangements with a single click from the menu bar.<br>A lightweight, privacy-first window management utility for macOS without invasive permissions.</p>
+
+    <div class="alert">
+      <div class="alert-title">Designed with Strict Privacy and Security</div>
+      <p>Cetti never requests Accessibility permissions (UI manipulation of other apps) or Screen Recording permissions. All data remains exclusively on your local Mac, with absolutely zero network transmission.</p>
+    </div>
+
+    <h2>Key Features</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>⚡️ One-Click Capture & Restore</h3>
+        <p>Save your active multi-window layout as a "WorkSet" and restore it instantly via the menu bar popover or customizable global hotkeys.</p>
+      </div>
+      <div class="card">
+        <h3>🔒 No Invasive Permissions</h3>
+        <p>Cetti relies on Apple's native Shortcuts app to move windows safely, avoiding dangerous Accessibility privileges and Screen Recording prompts.</p>
+      </div>
+      <div class="card">
+        <h3>🌐 100% Offline & Local</h3>
+        <p>Contains no network communication code or network client entitlements. Technical impossibility of sending logs or user data externally.</p>
+      </div>
+      <div class="card">
+        <h3>📐 Smart Zone Splitting</h3>
+        <p>Configure halves, thirds, and custom zone ratios for flexible multi-display and external monitor workflows.</p>
+      </div>
+    </div>
+
+    <h2>Pricing Plans</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Free Tier</h3>
+        <div class="price">¥0</div>
+        <div class="price-sub">Core features free forever</div>
+        <ul class="pricing-features">
+          <li>Window capture & restore (base sets)</li>
+          <li>Standard screen split zones</li>
+          <li>Global keyboard shortcuts</li>
+          <li>Full offline privacy protection</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Popular</div>
+        <h3>Pro Lifetime</h3>
+        <div class="price">¥2,000</div>
+        <div class="price-sub">One-time payment (Non-consumable)</div>
+        <ul class="pricing-features">
+          <li>Unlimited WorkSet layout registrations</li>
+          <li>Advanced custom zone ratio configurations</li>
+          <li>Window position lock and precise snapping</li>
+          <li>Lifetime license including future major updates</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Pro Monthly</h3>
+        <div class="price">¥250 <span style="font-size: 1rem; font-weight: normal; color: var(--text-muted);">/ mo</span></div>
+        <div class="price-sub">Auto-renewable subscription (tax incl.)</div>
+        <ul class="pricing-features">
+          <li>Unlock all Pro advanced features</li>
+          <li>Cancel anytime via macOS System Settings</li>
+          <li>Flexible option for short-term projects</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>System Requirements</h2>
+    <div class="table-wrapper">
+      <table>
+        <tbody>
+          <tr>
+            <th>Operating System</th>
+            <td>macOS 14.0 (Sonoma) or later</td>
+          </tr>
+          <tr>
+            <th>Supported Hardware</th>
+            <td>Apple Silicon (M1/M2/M3/M4) and Intel Macs</td>
+          </tr>
+          <tr>
+            <th>Prerequisites</th>
+            <td>Built-in macOS Shortcuts app</td>
+          </tr>
+          <tr>
+            <th>Distribution</th>
+            <td>Mac App Store</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Legal & Support Documents</h2>
+    <ul>
+      <li><a href="./privacy.html">Privacy Policy</a> — Zero data collection, local storage & diagnostic log policies</li>
+      <li><a href="./terms.html">Terms of Service</a> — License terms, accepted use, billing, and cancellations</li>
+      <li><a href="./tokushoho.html">Specified Commercial Transactions Act</a> — Vendor identity, pricing, payment, and refund policies</li>
+      <li><a href="./support.html">Support & FAQ</a> — Common troubleshooting, log retrieval, and contact channels</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div>&copy; 2026 Slip. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="./index.html">ホーム / Home</a>
+      <a href="./privacy.html">プライバシー / Privacy</a>
+      <a href="./terms.html">利用規約 / Terms</a>
+      <a href="./tokushoho.html">特定商取引法 / Legal</a>
+      <a href="./support.html">サポート / Support</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
